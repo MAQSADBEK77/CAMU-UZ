@@ -1,7 +1,6 @@
 import React from "react";
 import Logo from '../images/icons/logo.png'
 import { NavLink } from "react-router-dom";
-import 
 function Header() {
   return (
     <div className="container-css navbar bg-base-100">
