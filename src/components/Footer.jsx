@@ -1,3 +1,5 @@
+import "./Footer.css";
+
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -34,13 +36,13 @@ function Footer() {
           <header className="footer-title">Свяжитесь с нами</header>
           <a className="link link-hover">
             <BsTelephone />
-            +998 95 485 00 70
+            <span> +998 95 485 00 70</span>
           </a>
           <a className="link link-hover">
             <CiLocationOn />
-            Ulitsa Usmona Yusupova, Fergana, Uzbekistan
+            <span> Ulitsa Usmona Yusupova, Fergana, Uzbekistan</span>
           </a>
-          <a className="link link-hover">
+          <a className="link link-hover text-red-600">
             <HiOutlineMail />
             info@camuf.uz
           </a>
