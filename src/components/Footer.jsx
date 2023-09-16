@@ -10,11 +10,11 @@ function Footer() {
   return (
     <div className="container-css">
       <footer className="footer p-10 bg-base-200 text-base-content">
-        <nav>
-          <header className="footer-title">
+        <nav className="text-center mx-auto justify-center">
+          <header className="pb-3 mx-auto">
             <img src={Logo} alt="Logo" width="130px" height="130px" />
           </header>
-          <div className="grid grid-flow-col gap-4">
+          <div className="grid grid-flow-col gap-4 mx-auto">
             <a>
               <FaFacebookF width="50px" />
             </a>
