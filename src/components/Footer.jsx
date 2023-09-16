@@ -4,6 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 import { BsTelephone } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
 import { HiOutlineMail } from "react-icons/hi";
+import { LiaTelegramPlane } from "react-icons/lia";
 import Logo from "../images/icons/logo.png";
 
 function Footer() {
@@ -14,15 +15,18 @@ function Footer() {
           <header className="pb-3 mx-auto">
             <img src={Logo} alt="Logo" width="130px" height="130px" />
           </header>
-          <div className="grid grid-flow-col gap-4 mx-auto">
+          <div className="grid grid-flow-col gap-4 mx-auto footer-icons">
             <a>
-              <FaFacebookF width="50px" />
+              <FaFacebookF />
             </a>
             <a>
               <FaTwitter />
             </a>
             <a>
               <FaInstagram />
+            </a>
+            <a>
+              <LiaTelegramPlane />
             </a>
           </div>
         </nav>
