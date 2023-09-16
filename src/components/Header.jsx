@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from '../images/icons/logo.png'
 import { NavLink } from "react-router-dom";
+import { CiDark } from "react-icons/ci";
 function Header() {
   return (
     <div className="container-css navbar bg-base-100">
@@ -131,7 +132,7 @@ function Header() {
             </details>
           </li>
           <li>
-            <a>Dark mode</a>
+            <a><CiDark/></a>
           </li>
         </ul>
       </div>
