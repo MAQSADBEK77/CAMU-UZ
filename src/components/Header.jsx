@@ -1,9 +1,11 @@
 import React from "react";
+import Logo from '../images/icons/logo.png'
 import { NavLink } from "react-router-dom";
+import 
 function Header() {
   return (
     <div className="container-css navbar bg-base-100">
-      <div className="navbar-start">
+      <div className="navbar-start pt-3">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
@@ -45,7 +47,7 @@ function Header() {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">CAMU</a>
+        <a> <img className="w-20" src={Logo} alt="" /></a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -102,13 +104,13 @@ function Header() {
           </li>
           <li>
             <a>Rasmlar</a>
-          </li> 
+          </li>
           <li>
             <a>Acta CAMU</a>
-          </li> 
+          </li>
           <li>
             <a>Aloqa</a>
-          </li> 
+          </li>
         </ul>
       </div>
       <div className="navbar-end">
