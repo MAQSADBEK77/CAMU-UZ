@@ -4,15 +4,19 @@ import { FaInstagram } from "react-icons/fa";
 import { BsTelephone } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
 import { HiOutlineMail } from "react-icons/hi";
-import Logo from "../images/icons/logo.png";
 
 function Footer() {
   return (
-    <div className="container-css">
+    <div className="container-css" data-aos="flip-down">
       <footer className="footer p-10 bg-base-200 text-base-content">
         <nav>
-          <header className="footer-title">
-            <img src={Logo} alt="Logo" width="130px" height="130px" />
+          <header className="footer">
+            <img
+              src="./public/images/icons/logo.png"
+              alt="Logo"
+              width="130px"
+              height="130px"
+            />
           </header>
           <div className="grid grid-flow-col gap-4">
             <a>

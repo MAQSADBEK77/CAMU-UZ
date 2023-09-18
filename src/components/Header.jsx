@@ -1,11 +1,24 @@
-import React from "react";
-import Logo from '../images/icons/logo.png'
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { CiDark } from "react-icons/ci";
 function Header() {
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") == "dark"
+      ? localStorage.getItem("theme")
+      : "light"
+  );
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    const localTheme = localStorage.getItem("theme");
+    document.querySelector("html").setAttribute("data-theme", localTheme);
+  }, [theme]);
+  function changeMode() {
+    const localTheme = localStorage.getItem("theme");
+    localTheme == "light" ? setTheme("dark") : setTheme("light");
+  }
   return (
-    <div className="container-css navbar bg-base-100">
-      <div className="navbar-start pt-3">
+    <div className="container-css navbar rounded-lg bg-base-100 pt-5 z-10 fixed left-[50%] translate-x-[-50%]">
+      <div className="navbar-start flex">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
@@ -29,7 +42,7 @@ function Header() {
               <a href="#">Asosiy</a>
             </li>
             <li>
-              <a>Universitet haqida</a>
+              <a className="z-10">Universitet haqida</a>
               <ul className="p-2">
                 <li>
                   <a>Halqaro bo'lim</a>
@@ -43,20 +56,47 @@ function Header() {
               </ul>
             </li>
             <li>
-              <a>Item 3</a>
+              <a>Yo'nalishlar</a>
+              <ul className="p-2">
+                <li>
+                  <a>Bakalavr</a>
+                </li>
+              </ul>
             </li>
+            <li className="z-10">
+              <a>So'ngi yangiliklar</a>
+              <ul className="p-2 z-10">
+                <li>
+                  <a>Maqolalar</a>
+                </li>
+                <li>
+                  <a>Eng so'ngilari</a>
+                </li>
+                <li>
+                  <a>Maqolalar</a>
+                </li>
+              </ul>
+            </li>
+            <a>Rasmlar</a>
+            <a>Acta CAMU</a>
+            <a>Aloqa</a>
           </ul>
         </div>
-        <a> <img className="w-20" src={Logo} alt="" /></a>
+        <a>
+          {" "}
+          <a className="flex justify-center items-center btn btn-ghost text-[#183c76] normal-case text-4xl">
+            CAMU
+          </a>
+        </a>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Asosiy</a>
+      <div className="navbar-center hidden lg:flex z-10">
+        <ul className="menu menu-horizontal px-1 z-10">
+          <li className="flex items-center z-10">
+            <a className="z-10">Asosiy</a>
           </li>
-          <li tabIndex={0}>
-            <details>
-              <summary>
+          <li tabIndex={0} className="z-10">
+            <details className="z-10">
+              <summary className="z-10">
                 <a>Universitet haqida</a>
               </summary>
               <ul className="p-2">
@@ -72,7 +112,7 @@ function Header() {
               </ul>
             </details>
           </li>
-          <li tabIndex={0}>
+          <li className="z-10" tabIndex={0}>
             <details>
               <summary>
                 <a>Yo'nalishlar</a>
@@ -84,12 +124,12 @@ function Header() {
               </ul>
             </details>
           </li>
-          <li tabIndex={0}>
+          <li className="z-10" tabIndex={0}>
             <details>
-              <summary>
+              <summary className="z-10">
                 <a>So'ngi yangiliklar</a>
               </summary>
-              <ul className="p-2">
+              <ul className="p-2 z-10">
                 <li>
                   <a>Maqolalar</a>
                 </li>
@@ -131,8 +171,12 @@ function Header() {
               </ul>
             </details>
           </li>
-          <li>
-            <a><CiDark/></a>
+          <li className="flex justify-center items-center">
+            <button
+              onClick={changeMode}
+              className="flex justify-center items-center">
+              <CiDark />
+            </button>
           </li>
         </ul>
       </div>
