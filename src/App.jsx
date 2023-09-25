@@ -13,8 +13,6 @@ import Maqolalar from "./pages/Maqolalar";
 import Qabul from "./pages/Qabul";
 import Rahbariyat from "./pages/Rahbariyat";
 import SongiYangiliklar from "./pages/SongiYangiliklar";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 function App() {
   const routes = createBrowserRouter([
     {
@@ -25,52 +23,52 @@ function App() {
     },
     {
       element: <ActaCamu />,
-      path: "ActaCamu",
+      path: "actacamu",
       errorElement: <Error />,
     },
     {
       element: <Aloqa />,
-      path: "Aloqa",
+      path: "aloqa",
       errorElement: <Error />,
     },
     {
       element: <Bakalaviriat />,
-      path: "Bakalaviriat",
+      path: "bakalaviriat",
       errorElement: <Error />,
     },
     {
       element: <Fotografiyalar />,
-      path: "Fotografiyalar",
+      path: "fotografiyalar",
       errorElement: <Error />,
     },
     {
       element: <HalqaroBolim />,
-      path: "HalqaroBolim",
+      path: "halqarobolim",
       errorElement: <Error />,
     },
     {
       element: <Hodisalar />,
-      path: "Hodisalar",
+      path: "hodisalar",
       errorElement: <Error />,
     },
     {
       element: <Maqolalar />,
-      path: "Maqolalar",
+      path: "maqolalar",
       errorElement: <Error />,
     },
     {
       element: <Qabul />,
-      path: "Qabul",
+      path: "qabul",
       errorElement: <Error />,
     },
     {
       element: <Rahbariyat />,
-      path: "Rahbariyat",
+      path: "rahbariyat",
       errorElement: <Error />,
     },
     {
       element: <SongiYangiliklar />,
-      path: "SongiYangiliklar",
+      path: "songiyangiliklar",
       errorElement: <Error />,
     },
     {
@@ -78,15 +76,7 @@ function App() {
       path: "*",
     },
   ]);
-  return (
-    <>
-      <Header />
-      <div className="container-css">
-        <RouterProvider router={routes} />
-      </div>
-      <Footer />
-    </>
-  );
+  return <RouterProvider router={routes} />;
 }
 
 export default App;

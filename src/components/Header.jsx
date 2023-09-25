@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BsSunFill, BsMoonFill } from "react-icons/bs";
-
+import { NavLink } from "react-router-dom";
 function Header() {
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") == "dark"
@@ -17,7 +17,7 @@ function Header() {
     localTheme == "light" ? setTheme("dark") : setTheme("light");
   }
   return (
-    <div className=" navbar rounded-lg bg-base-100 pt-5 z-10 fixed left-[50%] translate-x-[-50%]">
+    <div className="navbar rounded-lg bg-base-100 pt-5 z-10 fixed left-[50%] translate-x-[-50%]">
       <div className="container-css px-[100px]">
         <div className="navbar-start flex">
           <div className="dropdown">
@@ -46,7 +46,7 @@ function Header() {
                 <a className="z-10">Universitet haqida</a>
                 <ul className="p-2">
                   <li>
-                    <a>Halqaro bo'lim</a>
+                    <NavLink to="/">Halqaro bo'lim</NavLink>
                   </li>
                   <li>
                     <a>Madaniyat bo'limi</a>
@@ -80,7 +80,7 @@ function Header() {
               </li>
               <a>Rasmlar</a>
               <a>Acta CAMU</a>
-              <a>Aloqa</a>
+              {/* <>Aloqa</> */}
             </ul>
           </div>
           <a>
