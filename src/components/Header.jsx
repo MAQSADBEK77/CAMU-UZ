@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { CiDark } from "react-icons/ci";
+import { BsSunFill, BsMoonFill } from "react-icons/bs";
+
 function Header() {
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") == "dark"
@@ -17,7 +19,7 @@ function Header() {
     localTheme == "light" ? setTheme("dark") : setTheme("light");
   }
   return (
-    <div className="container-css navbar rounded-lg bg-base-100 pt-5 z-10 fixed left-[50%] translate-x-[-50%]">
+    <div className=" container-css navbar rounded-lg bg-base-100 pt-5 z-10 fixed left-[50%] translate-x-[-50%]">
       <div className="navbar-start flex">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -154,7 +156,7 @@ function Header() {
         </ul>
       </div>
       <div className="navbar-end">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 gap-2">
           <li tabIndex={0}>
             <details>
               <summary>Til</summary>
@@ -172,11 +174,11 @@ function Header() {
             </details>
           </li>
           <li className="flex justify-center items-center">
-            <button
-              onClick={changeMode}
-              className="flex justify-center items-center">
-              <CiDark />
-            </button>
+            <label className="swap swap-rotate">
+              <input type="checkbox" onClick={changeMode} />
+              <BsSunFill className="swap-on h-4 w-4" />
+              <BsMoonFill className="swap-off h-4 w-4" />
+            </label>
           </li>
         </ul>
       </div>
