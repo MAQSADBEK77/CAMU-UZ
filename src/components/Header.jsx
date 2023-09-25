@@ -17,8 +17,8 @@ function Header() {
     localTheme == "light" ? setTheme("dark") : setTheme("light");
   }
   return (
-    <div className=" navbar rounded-lg bg-base-100 pt-5 z-10 fixed left-[50%] translate-x-[-50%] mx-[-50px]">
-      <div className="container-css">
+    <div className=" navbar rounded-lg bg-base-100 pt-5 z-10 fixed left-[50%] translate-x-[-50%]">
+      <div className="container-css px-[100px]">
         <div className="navbar-start flex">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
