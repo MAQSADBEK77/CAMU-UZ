@@ -12,8 +12,8 @@ function Footer() {
   return (
     <div className="container-css" data-aos="flip-down">
       <footer className="footer p-10 bg-base-200 text-base-content">
-        <nav>
-          <header>
+        <nav className="sm:mx-auto">
+          <header className="mx-auto pb-3">
             <img
               src="./public/images/icons/logo.png"
               alt="Logo"
