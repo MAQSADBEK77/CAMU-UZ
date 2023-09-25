@@ -3,9 +3,9 @@ import { BsWalletFill } from "react-icons/bs";
 import { MdDomainAdd, MdOutlineDiversity1 } from "react-icons/md";
 function Statics() {
   return (
-    <div className="w-full statics flex flex-col gap-16 justify-center text-center pb-12">
+    <div className="w-full statics flex flex-col mx-auto gap-16 justify-center text-center pb-12">
       <h2 className="text-4xl md:text-6xl font-bold capitalize">Statistika</h2>
-      <div className="flex justify-between mx-auto items-center flex-wrap w-full gap-12">
+      <div className="flex justify-between mx-auto items-center flex-wrap w-11/12 gap-12">
         <div className="flex flex-col gap-2 " data-aos="fade-left">
           <div className="statistic w-28 h-28 flex justify-center items-center m-auto bg-slate-300 rounded-full hover:bg-[#0d2d62]">
             <IoMdSchool className="text-[#0d2d62] w-14 h-14" />

@@ -23,7 +23,7 @@ function Carousel({ images }) {
   };
   console.log(current);
   return (
-    <div className="carousel-block pt-20">
+    <div className="carousel-block pt-28">
       <div
         className="carousel"
         onMouseEnter={() => {
