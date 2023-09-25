@@ -1,16 +1,19 @@
+import "./Footer.css";
+
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { BsTelephone } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
 import { HiOutlineMail } from "react-icons/hi";
+import { LiaTelegramPlane } from "react-icons/lia";
 
 function Footer() {
   return (
     <div className="container-css" data-aos="flip-down">
       <footer className="footer p-10 bg-base-200 text-base-content">
         <nav>
-          <header className="footer">
+          <header>
             <img
               src="./public/images/icons/logo.png"
               alt="Logo"
@@ -18,9 +21,9 @@ function Footer() {
               height="130px"
             />
           </header>
-          <div className="grid grid-flow-col gap-4">
+          <div className="grid grid-flow-col gap-4 mx-auto footer-icons">
             <a>
-              <FaFacebookF width="50px" />
+              <FaFacebookF />
             </a>
             <a>
               <FaTwitter />
@@ -28,19 +31,22 @@ function Footer() {
             <a>
               <FaInstagram />
             </a>
+            <a>
+              <LiaTelegramPlane />
+            </a>
           </div>
         </nav>
         <nav className="footer-adres">
           <header className="footer-title">Свяжитесь с нами</header>
           <a className="link link-hover">
             <BsTelephone />
-            +998 95 485 00 70
+            <span> +998 95 485 00 70</span>
           </a>
           <a className="link link-hover">
             <CiLocationOn />
-            Ulitsa Usmona Yusupova, Fergana, Uzbekistan
+            <span> Ulitsa Usmona Yusupova, Fergana, Uzbekistan</span>
           </a>
-          <a className="link link-hover">
+          <a className="link link-hover text-red-600">
             <HiOutlineMail />
             info@camuf.uz
           </a>
