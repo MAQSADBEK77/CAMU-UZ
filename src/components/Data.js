@@ -1,16 +1,22 @@
+import photo1 from "../../public/images/carousel1.jpg";
+import photo2 from "../../public/images/carousel2.jpg";
+import photo3 from "../../public/images/carousel3.jpg";
+import photo4 from "../../public/images/carousel4.jpg";
+import photo5 from "../../public/images/carousel5.jpg";
+import photo6 from "../../public/images/carousel6.jpg";
 export const countries = [
   {
-    image: "./public/images/carousel5.jpg",
+    image: photo1,
     title: "CENTRAL ASIA MEDICAL UNIVERSITY",
     text: `Farg'ona viloyatida joylashgan zamonaviy Tibbiyot universiteti`,
     id: 6,
   },
   {
-    image: "./public/images/carousel1.jpg",
+    image: photo2,
     title: "MARAZIY OSIYO TIBBIYOT UNIVERSITETI",
   },
   {
-    image: "./public/images/carousel6.jpg",
+    image: photo3,
     title: "President tashrifi",
     text: `O'zbekiston respublikasi presidenti Shavkat Mirziyoyev
               Miromonovich CAMU 
@@ -18,16 +24,16 @@ export const countries = [
     id: 6,
   },
   {
-    image: "./public/images/carousel2.jpg",
+    image: photo4,
     title: "Sifatli texnalogiyalar shinam xonalar",
     text: `Eng zamonaviy Universitetlardan biri CAMU universiteti`,
   },
   {
-    image: "./public/images/carousel3.jpg",
+    image: photo5,
     title: "Katta tajribaga ega o'qituvchilar",
   },
   {
-    image: "./public/images/carousel4.jpg",
+    image: photo6,
     title: "Katta va shinam bo'lgan universitet",
   },
 ];
