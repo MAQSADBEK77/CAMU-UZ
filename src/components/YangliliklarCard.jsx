@@ -1,5 +1,6 @@
-import React from "react";
-
+import rasm1 from "../../public/images/carousel6.jpg";
+import rasm2 from "../../public/images/carousel5.jpg";
+import rasm3 from "../../public/images/carousel6.jpg";
 function YangliliklarCard() {
   return (
     <div className="yangiliklarCard">
@@ -7,7 +8,7 @@ function YangliliklarCard() {
       <div className="flex justify-center flex-wrap gap-y-11 pb-10">
         <div className="card card-compact w-80 bg-base-100 shadow-xl transition duration-300 hover:scale-105">
           <figure>
-            <img src="./public/images/carousel6.jpg" alt="Shoes" />
+            <img src={rasm1} alt="Shoes" />
           </figure>
           <div className="card-body">
             <h2 className="card-title">President tashrifi</h2>
@@ -26,7 +27,7 @@ function YangliliklarCard() {
         </div>
         <div className="card card-compact w-96 bg-base-100 mx-auto shadow-xl transition duration-300 hover:scale-105">
           <figure>
-            <img src="./public/images/carousel5.jpg" alt="Shoes" />
+            <img src={rasm2} alt="Shoes" />
           </figure>
           <div className="card-body">
             <h2 className="card-title">Yangi universitet</h2>
@@ -47,7 +48,7 @@ function YangliliklarCard() {
         </div>
         <div className="card card-compact w-96 bg-base-100 shadow-xl transition duration-300 hover:scale-105">
           <figure>
-            <img src="./public/images/carousel6.jpg" alt="Shoes" />
+            <img src={rasm3} alt="Shoes" />
           </figure>
           <div className="card-body">
             <h2 className="card-title">President tashrifi</h2>
